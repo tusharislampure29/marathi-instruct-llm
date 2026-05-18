@@ -108,7 +108,7 @@ Each model response on the cultural set is scored 1-5 on:
 3. **cultural_accuracy** — Maharashtra-appropriate references, correct idiom use
 4. **instruction_following** — answers what was asked, honours length/format
 
-The harness supports both **GPT-4o** (`--rubric openai`, used in this release) and Claude Sonnet 4.6 (`--rubric claude`) as judge. It also runs the standard ROUGE-L / chrF / sacreBLEU on the held-out test set and a **position-randomized pairwise** A/B vs the base model.
+The harness uses **GPT-4o** (`--rubric openai`) as the judge. It also runs the standard ROUGE-L / chrF / sacreBLEU on the held-out test set and a **position-randomized pairwise** A/B vs the base model.
 
 ### 4. A resume-safe training notebook (`notebooks/train_colab_hub.ipynb`)
 
@@ -163,7 +163,7 @@ python -m src.tokenizer_analysis
 ├── src/
 │   ├── data_prep.py            # corpus pipeline: filter → sample → MinHash dedupe → ChatML
 │   ├── tokenizer_analysis.py   # tokens/char & fragmentation: Marathi vs English baseline
-│   ├── eval_harness.py         # ROUGE/chrF/BLEU + GPT-4o/Claude rubric + pairwise A/B
+│   ├── eval_harness.py         # ROUGE/chrF/BLEU + GPT-4o rubric + pairwise A/B
 │   └── inference.py            # load adapter + generate (for local sanity)
 ├── notebooks/
 │   └── train_colab_hub.ipynb   # Unsloth QLoRA + resume-safe HF Hub checkpointing

@@ -36,7 +36,7 @@ The defensible story is **not** "we beat the base on Marathi knowledge" — we d
 
 1. The **training-side eval_loss curve** (0.7670 → 0.5871, monotonic) shows the adapter learned the Aya-Marathi instruction-following distribution as designed.
 2. The **tokenizer-efficiency analysis** (Qwen tokenizer is 4.79× less efficient on Marathi than English) is a real, novel finding documented for the next person.
-3. The **hand-curated cultural eval set + the rubric harness** (`src/eval_harness.py`) are real artifacts that work; a v2 with the full pairwise A/B + Claude rubric (which the budget didn't allow this run) is a one-day add-on.
+3. The **hand-curated cultural eval set + the rubric harness** (`src/eval_harness.py`) are real artifacts that work; a v2 with the full pairwise A/B + GPT-4o rubric (which the budget didn't allow this run) is a one-day add-on.
 
 ## Files
 

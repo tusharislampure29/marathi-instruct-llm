@@ -3,7 +3,7 @@
   "language": "marathi",
   "created": "2026-05-11",
   "author": "Tushar Islampure",
-  "purpose": "Hand-curated Marathi evaluation set for measuring fluency, cultural accuracy, factuality, and reasoning of Marathi-tuned LLMs. Used with src/eval_harness.py --judge claude. Built because off-the-shelf BLEU/ROUGE on translated benchmarks misses what Marathi speakers actually care about.",
+  "purpose": "Hand-curated Marathi evaluation set for measuring fluency, cultural accuracy, factuality, and reasoning of Marathi-tuned LLMs. Used with src/eval_harness.py --rubric openai. Built because off-the-shelf BLEU/ROUGE on translated benchmarks misses what Marathi speakers actually care about.",
   "categories": ["geography", "history", "culture", "language", "reasoning"],
   "system_prompt_marathi": "तुम्ही एक उपयुक्त AI सहाय्यक आहात जो मराठीत स्पष्ट आणि अचूक उत्तरे देतो.",
   "prompts": [

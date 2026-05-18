@@ -4,11 +4,11 @@ Evaluate a (base model, adapter) pair for Marathi instruction-following.
 Modes:
   1. Held-out test set (data/processed/test.jsonl):
         - ROUGE-L, chrF, sacreBLEU vs reference
-        - Pairwise LLM-judge win-rate (--compare base tuned --judge claude|openai)
+        - Pairwise LLM-judge win-rate (--compare base tuned --judge openai)
   2. Hand-curated cultural eval set (eval/cultural_marathi_eval.json):
         - Per-response rubric scoring on 4 axes
           (fluency, factuality, cultural-accuracy, instruction-following; 1-5)
-        - Judge provider: claude (Sonnet 4.6) or openai (gpt-4o)
+        - Judge: gpt-4o via OpenAI
         - Per-category breakdown (geography / history / culture / language / reasoning)
         - --load-responses lets the rubric score pre-generated outputs (e.g. from a Kaggle
           notebook run) without re-running model generation on the local machine.
@@ -158,36 +158,24 @@ Reply with EXACTLY one line: "A", "B", or "TIE". No explanation."""
 
 
 def llm_judge(prompts: list[str], a_responses: list[str], b_responses: list[str],
-              provider: str) -> dict:
+              provider: str = "openai") -> dict:
     """Returns {wins_a, wins_b, ties, total}. Randomizes A/B order to remove position bias."""
     import random
     rng = random.Random(0)
 
-    if provider == "claude":
-        from anthropic import Anthropic
-        client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-
-        def ask(prompt_text: str) -> str:
-            resp = client.messages.create(
-                model="claude-sonnet-4-6",
-                max_tokens=10,
-                messages=[{"role": "user", "content": prompt_text}],
-            )
-            return resp.content[0].text.strip().upper()
-
-    elif provider == "openai":
-        from openai import OpenAI
-        client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-
-        def ask(prompt_text: str) -> str:
-            resp = client.chat.completions.create(
-                model="gpt-4o",
-                max_tokens=10,
-                messages=[{"role": "user", "content": prompt_text}],
-            )
-            return resp.choices[0].message.content.strip().upper()
-    else:
+    if provider != "openai":
         raise ValueError(f"unknown judge provider: {provider}")
+
+    from openai import OpenAI
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+
+    def ask(prompt_text: str) -> str:
+        resp = client.chat.completions.create(
+            model="gpt-4o",
+            max_tokens=10,
+            messages=[{"role": "user", "content": prompt_text}],
+        )
+        return resp.choices[0].message.content.strip().upper()
 
     wins_a = wins_b = ties = 0
     for p, a, b in zip(prompts, a_responses, b_responses):
@@ -259,9 +247,6 @@ Reply with ONE LINE of valid JSON: {{"fluency": int, "factuality": int, "cultura
 
 def _rubric_client(provider: str):
     """Build the provider client. Caller must set the appropriate env var."""
-    if provider == "claude":
-        from anthropic import Anthropic
-        return Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     if provider == "openai":
         from openai import OpenAI
         return OpenAI(api_key=os.environ["OPENAI_API_KEY"])
@@ -270,12 +255,6 @@ def _rubric_client(provider: str):
 
 def _rubric_ask(provider: str, client, user_text: str) -> str:
     """Send one rubric prompt, return the raw text reply."""
-    if provider == "claude":
-        return client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=200,
-            messages=[{"role": "user", "content": user_text}],
-        ).content[0].text.strip()
     if provider == "openai":
         return client.chat.completions.create(
             model="gpt-4o",
@@ -343,7 +322,7 @@ def run_cultural(model_id: str, adapter_id: str | None, tag: str,
         "samples": [],
     }
 
-    if rubric in ("claude", "openai"):
+    if rubric == "openai":
         client = _rubric_client(rubric)
         per_cat: dict[str, list[dict]] = {}
         for item, response in zip(items, preds):
@@ -402,11 +381,11 @@ def main() -> None:
     p.add_argument("--limit", type=int, default=None, help="Cap test samples (for fast iter).")
     p.add_argument("--compare", nargs=2, metavar=("TAG_A", "TAG_B"),
                    help="Run LLM-judge head-to-head between two prior runs.")
-    p.add_argument("--judge", choices=["claude", "openai"], default="claude")
+    p.add_argument("--judge", choices=["openai"], default="openai")
     p.add_argument("--cultural", action="store_true",
                    help="Use the hand-curated cultural eval set instead of test.jsonl.")
-    p.add_argument("--rubric", choices=["claude", "openai"], default=None,
-                   help="With --cultural: score each response on a 4-axis rubric via the chosen provider.")
+    p.add_argument("--rubric", choices=["openai"], default=None,
+                   help="With --cultural: score each response on a 4-axis rubric via gpt-4o.")
     p.add_argument("--load-responses", default=None,
                    help="With --cultural: load pre-generated responses from this JSON file "
                         "(skips model generation, runs rubric only).")

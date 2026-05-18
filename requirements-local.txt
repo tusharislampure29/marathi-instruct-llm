@@ -25,7 +25,6 @@ rouge-score>=0.1.2
 nltk>=3.9.0
 
 # LLM-as-judge
-anthropic>=0.34.0
 openai>=1.40.0
 
 # Dev
