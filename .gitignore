@@ -52,6 +52,9 @@ Thumbs.db
 wandb/
 runs/
 
+# LinkedIn drafts — strategy material, local-only
+docs/LINKEDIN_POST.md
+
 # Local scratch dirs (anything prefixed with underscore)
 _*/
 
