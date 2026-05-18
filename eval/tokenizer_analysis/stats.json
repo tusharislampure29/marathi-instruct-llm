@@ -1,0 +1,76 @@
+{
+  "tokenizer": "Qwen/Qwen2.5-1.5B-Instruct",
+  "marathi": {
+    "name": "marathi",
+    "n_samples": 1000,
+    "total_chars": 429493,
+    "total_words": 64977,
+    "total_tokens": 413202,
+    "chars_per_token": 1.0394262370462872,
+    "tokens_per_char": 0.9620692304647572,
+    "tokens_per_word": 6.359204026039984,
+    "fragmentation_rate": 0.987888021915447,
+    "sample_fragmentation": [
+      [
+        "गोलंदाजांपैकी",
+        14
+      ],
+      [
+        "सुरक्षिततेसाठी",
+        14
+      ],
+      [
+        "वचनबद्धतेमध्ये",
+        14
+      ],
+      [
+        "गुन्ह्यांपैकी",
+        14
+      ],
+      [
+        "गुन्हेगारांशी",
+        13
+      ]
+    ]
+  },
+  "english": {
+    "name": "english",
+    "n_samples": 102,
+    "total_chars": 5349,
+    "total_words": 926,
+    "total_tokens": 1075,
+    "chars_per_token": 4.975813953488372,
+    "tokens_per_char": 0.20097214432604224,
+    "tokens_per_word": 1.1609071274298055,
+    "fragmentation_rate": 0.1652267818574514,
+    "sample_fragmentation": [
+      [
+        "Summarise",
+        3
+      ],
+      [
+        "exercising",
+        3
+      ],
+      [
+        "mitochondria",
+        3
+      ],
+      [
+        "Romeo",
+        3
+      ],
+      [
+        "renewable",
+        3
+      ]
+    ]
+  },
+  "marathi_to_english_ratio": {
+    "tokens_per_char": 4.787077501168359,
+    "tokens_per_word": 5.477788770337698,
+    "chars_per_token": 0.20889571972794144,
+    "fragmentation_rate": 5.978982407148392
+  },
+  "headline": "Qwen2.5's tokenizer uses 4.79x more tokens per character on Marathi than English (1.04 chars/token vs 4.98). A 1024-token context fits ~161 Marathi words vs ~882 English words."
+}

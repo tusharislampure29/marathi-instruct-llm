@@ -1,0 +1,924 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter_id": null,
+  "tag": "rubric_tuned",
+  "rubric": "openai",
+  "loaded_from": "eval/results/cultural_tuned.json",
+  "n": 50,
+  "samples": [
+    {
+      "id": "geo-01",
+      "category": "geography",
+      "difficulty": "easy",
+      "prompt": "महाराष्ट्राची राजधानी कोणती आहे?",
+      "expected_keywords": [
+        "मुंबई"
+      ],
+      "response": "सिंगापृथ",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-02",
+      "category": "geography",
+      "difficulty": "easy",
+      "prompt": "महाराष्ट्रातील दोन सर्वात मोठी शहरे कोणती?",
+      "expected_keywords": [
+        "मुंबई",
+        "पुणे"
+      ],
+      "response": "सिंगापृथ",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-03",
+      "category": "geography",
+      "difficulty": "medium",
+      "prompt": "महाराष्ट्रातील पश्चिमेकडे असलेल्या डोंगररांगेला कोणते नाव आहे?",
+      "expected_keywords": [
+        "सह्याद्री",
+        "पश्चिम घाट"
+      ],
+      "response": "दोन बाजूंचे डोंगर",
+      "scores": {
+        "fluency": 2,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-04",
+      "category": "geography",
+      "difficulty": "medium",
+      "prompt": "महाराष्ट्रातून वाहणारी एक मोठी नदी कोणती?",
+      "expected_keywords": [
+        "गोदावरी",
+        "कृष्णा",
+        "भीमा",
+        "तापी"
+      ],
+      "response": "सिंगापृथ्य",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-05",
+      "category": "geography",
+      "difficulty": "easy",
+      "prompt": "महाराष्ट्राच्या पश्चिम किनाऱ्याला कोणता समुद्र आहे?",
+      "expected_keywords": [
+        "अरबी"
+      ],
+      "response": "संपूर्ण महाराष्ट्राच्या पश्चिम किनाऱ्यावर बागास आहे, जे भारताच्या खाडीच्या भागात आहे. इथिओपियाच्या शेकडो भागांवर आहे. या भागात अनेक राजधानी आहेत.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-06",
+      "category": "geography",
+      "difficulty": "medium",
+      "prompt": "विदर्भ प्रांतातील दोन प्रमुख शहरे कोणती?",
+      "expected_keywords": [
+        "नागपूर",
+        "अमरावती"
+      ],
+      "response": "संग्रहालय आणि बुद्धिमत्ता विदर्भ",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-07",
+      "category": "geography",
+      "difficulty": "medium",
+      "prompt": "कोकण प्रदेश महाराष्ट्राच्या कोणत्या भागात आहे?",
+      "expected_keywords": [
+        "पश्चिम",
+        "किनारा"
+      ],
+      "response": "निवासस्थान",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-08",
+      "category": "geography",
+      "difficulty": "hard",
+      "prompt": "महाराष्ट्रात किती जिल्हे आहेत?",
+      "expected_keywords": [
+        "३६",
+        "36",
+        "छत्तीस"
+      ],
+      "response": "महाराष्ट्रात 10 जिल्हा आहेत.",
+      "scores": {
+        "fluency": 4,
+        "factuality": 1,
+        "cultural_accuracy": 4,
+        "instruction_following": 3
+      }
+    },
+    {
+      "id": "geo-09",
+      "category": "geography",
+      "difficulty": "easy",
+      "prompt": "नाशिक हे शहर कोणत्या नदीच्या काठावर वसले आहे?",
+      "expected_keywords": [
+        "गोदावरी"
+      ],
+      "response": "नाझी रिमा",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "geo-10",
+      "category": "geography",
+      "difficulty": "medium",
+      "prompt": "महाराष्ट्राच्या शेजारी असलेली तीन राज्ये सांगा.",
+      "expected_keywords": [
+        "गुजरात",
+        "मध्य प्रदेश",
+        "तेलंगणा",
+        "कर्नाटक",
+        "गोवा",
+        "छत्तीसगड"
+      ],
+      "response": "अंदाग, काळा आणि निवास",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-01",
+      "category": "history",
+      "difficulty": "easy",
+      "prompt": "मराठा साम्राज्याचे संस्थापक कोण होते?",
+      "expected_keywords": [
+        "शिवाजी"
+      ],
+      "response": "जिमीन बार्नालिस",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-02",
+      "category": "history",
+      "difficulty": "medium",
+      "prompt": "छत्रपती शिवाजी महाराजांचा राज्याभिषेक कोणत्या किल्ल्यावर झाला?",
+      "expected_keywords": [
+        "रायगड"
+      ],
+      "response": "संग्रहालयाच्या प्रवेशद्वारावर",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-03",
+      "category": "history",
+      "difficulty": "medium",
+      "prompt": "'गुलामगिरी' हे प्रसिद्ध पुस्तक कोणी लिहिले?",
+      "expected_keywords": [
+        "ज्योतिबा फुले",
+        "जोतीराव फुले",
+        "महात्मा फुले"
+      ],
+      "response": "जॉन ब्रून",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-04",
+      "category": "history",
+      "difficulty": "easy",
+      "prompt": "'लोकमान्य' ही पदवी कोणाला दिली होती?",
+      "expected_keywords": [
+        "टिळक",
+        "बाळ गंगाधर टिळक"
+      ],
+      "response": "जॉन ब्रॅडफिल्ड",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-05",
+      "category": "history",
+      "difficulty": "medium",
+      "prompt": "पहिल्या स्त्री शिक्षिकेचे नाव सांगा ज्यांनी पुण्यात मुलींची शाळा सुरू केली.",
+      "expected_keywords": [
+        "सावित्रीबाई फुले"
+      ],
+      "response": "अर्थात, या वाक्याची अधिक जटिल आवृत्ती अशी आहे \"पहिल्या स्त्री शिक्षिकेचे नाव सांगणारा हा गाव आहे ज्याने पुण्यात मुलींची शाळा सुरू केली आणि 1905 मध्ये बँड ऑफ इंजिन डिस्क फॉर्म्युएरिझम (बीआईडी) चा भाग म्हणून त",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-06",
+      "category": "history",
+      "difficulty": "easy",
+      "prompt": "डॉ. बाबासाहेब आंबेडकरांनी कोणत्या समाजाच्या उद्धारासाठी कार्य केले?",
+      "expected_keywords": [
+        "दलित",
+        "अस्पृश्य"
+      ],
+      "response": "सिनसिनामी",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-07",
+      "category": "history",
+      "difficulty": "hard",
+      "prompt": "अफजल खान आणि शिवाजी महाराजांची भेट कोणत्या किल्ल्यावर झाली होती?",
+      "expected_keywords": [
+        "प्रतापगड"
+      ],
+      "response": "संग्रहाती",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-08",
+      "category": "history",
+      "difficulty": "medium",
+      "prompt": "संभाजी महाराज हे कोणाचे पुत्र होते?",
+      "expected_keywords": [
+        "शिवाजी"
+      ],
+      "response": "जिमा बाल्डविन",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-09",
+      "category": "history",
+      "difficulty": "hard",
+      "prompt": "मराठा साम्राज्याचे शेवटचे पेशवे कोण होते?",
+      "expected_keywords": [
+        "बाजीराव",
+        "दुसरा बाजीराव",
+        "बाजीराव दुसरा"
+      ],
+      "response": "जिमीन बार्नालिस",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "hist-10",
+      "category": "history",
+      "difficulty": "medium",
+      "prompt": "महात्मा गांधींबद्दल तीन वाक्यांत माहिती द्या.",
+      "expected_keywords": [
+        "स्वातंत्र्य",
+        "अहिंसा",
+        "गांधी"
+      ],
+      "response": "अर्थ:",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-01",
+      "category": "culture",
+      "difficulty": "easy",
+      "prompt": "गणपती बाप्पाला सर्वात आवडता गोड पदार्थ कोणता?",
+      "expected_keywords": [
+        "मोदक"
+      ],
+      "response": "सिस्ट्रोफिक डिझाइन",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-02",
+      "category": "culture",
+      "difficulty": "easy",
+      "prompt": "गुढीपाडवा कोणत्या महिन्यात येतो?",
+      "expected_keywords": [
+        "चैत्र",
+        "मार्च",
+        "एप्रिल"
+      ],
+      "response": "सप्टेंबर",
+      "scores": {
+        "fluency": 5,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-03",
+      "category": "culture",
+      "difficulty": "medium",
+      "prompt": "'पुरणपोळी' म्हणजे काय?",
+      "expected_keywords": [
+        "पुरण",
+        "पोळी",
+        "गोड"
+      ],
+      "response": "प्रसिद्ध बंडखोरी",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-04",
+      "category": "culture",
+      "difficulty": "medium",
+      "prompt": "महाराष्ट्रातील प्रसिद्ध लोकनृत्य कोणते?",
+      "expected_keywords": [
+        "लावणी"
+      ],
+      "response": "अध्यासंगी",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-05",
+      "category": "culture",
+      "difficulty": "medium",
+      "prompt": "'वारकरी' म्हणजे कोण?",
+      "expected_keywords": [
+        "विठ्ठल",
+        "पंढरपूर",
+        "वारी"
+      ],
+      "response": "संग्रहालय",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-06",
+      "category": "culture",
+      "difficulty": "medium",
+      "prompt": "संत तुकाराम कोणत्या गावाशी संबंधित आहेत?",
+      "expected_keywords": [
+        "देहू"
+      ],
+      "response": "ग्रँट हॉल, न्यूझीलंड",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-07",
+      "category": "culture",
+      "difficulty": "medium",
+      "prompt": "संत ज्ञानेश्वर कोणत्या गावात समाधीस्थ झाले?",
+      "expected_keywords": [
+        "आळंदी"
+      ],
+      "response": "निर्मिती बँड",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-08",
+      "category": "culture",
+      "difficulty": "easy",
+      "prompt": "पंढरपूरमध्ये कोणत्या देवाचे प्रसिद्ध मंदिर आहे?",
+      "expected_keywords": [
+        "विठ्ठल",
+        "विठोबा"
+      ],
+      "response": "पंढरपूर मंदिर",
+      "scores": {
+        "fluency": 2,
+        "factuality": 3,
+        "cultural_accuracy": 2,
+        "instruction_following": 2
+      }
+    },
+    {
+      "id": "cult-09",
+      "category": "culture",
+      "difficulty": "medium",
+      "prompt": "महाराष्ट्रात सार्वजनिक गणेशोत्सव सुरू करण्याचे श्रेय कोणाला जाते?",
+      "expected_keywords": [
+        "टिळक",
+        "लोकमान्य टिळक"
+      ],
+      "response": "संसदीय प्रशाल्याने बोलताना, इटलीच्या डब्ल्यूएसआरएफ (इटली) च्या निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक निवडक न",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "cult-10",
+      "category": "culture",
+      "difficulty": "medium",
+      "prompt": "महाराष्ट्रातील एक प्रसिद्ध शाकाहारी जेवण सांगा.",
+      "expected_keywords": [
+        "पुरणपोळी",
+        "वरण",
+        "भात",
+        "भाजी",
+        "थालिपीठ",
+        "मिसळ"
+      ],
+      "response": "अन्न",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-01",
+      "category": "language",
+      "difficulty": "easy",
+      "prompt": "'पुस्तक' या शब्दाला इंग्रजीत काय म्हणतात?",
+      "expected_keywords": [
+        "book"
+      ],
+      "response": "पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके, पुस्तके,",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-02",
+      "category": "language",
+      "difficulty": "easy",
+      "prompt": "मराठी मधे 'computer' ला काय म्हणतात?",
+      "expected_keywords": [
+        "संगणक"
+      ],
+      "response": "संगणक",
+      "scores": {
+        "fluency": 5,
+        "factuality": 5,
+        "cultural_accuracy": 5,
+        "instruction_following": 5
+      }
+    },
+    {
+      "id": "lang-03",
+      "category": "language",
+      "difficulty": "medium",
+      "prompt": "'आगीतून फुफाट्यात' या वाक्प्रचाराचा अर्थ काय?",
+      "expected_keywords": [
+        "संकट",
+        "मोठ्या",
+        "दुसऱ्या"
+      ],
+      "response": "अंधाळामध्ये बसलेले पिशवी",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-04",
+      "category": "language",
+      "difficulty": "medium",
+      "prompt": "'गाढवापुढे वाचली गीता' या म्हणीचा अर्थ काय?",
+      "expected_keywords": [
+        "समजत",
+        "मूर्ख",
+        "व्यर्थ",
+        "उपयोग"
+      ],
+      "response": "\"गाढवापुडे वाचली गीता\" हा शब्द निष्कर्षासाठी खरे आहे की तो ब्रँडन डेमनचा भाऊ आहे.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-05",
+      "category": "language",
+      "difficulty": "easy",
+      "prompt": "'उद्या' या शब्दाचा अर्थ काय? एक वाक्यात सांगा.",
+      "expected_keywords": [
+        "येणारा",
+        "दिवस",
+        "पुढचा"
+      ],
+      "response": "अधिकारी नवीन ग्रंथालयात प्रवेश करतात.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-06",
+      "category": "language",
+      "difficulty": "medium",
+      "prompt": "'अंथरूण पाहून पाय पसरावे' या म्हणीचा अर्थ काय?",
+      "expected_keywords": [
+        "मर्यादा",
+        "ऐपत",
+        "आर्थिक",
+        "खर्च"
+      ],
+      "response": "\"आणखी एक गोल घडवून निर्माण करा, आणखी एक गोल घडवून निर्माण करा\".",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-07",
+      "category": "language",
+      "difficulty": "medium",
+      "prompt": "'मोडकं तोडकं' म्हणजे काय?",
+      "expected_keywords": [
+        "अपूर्ण",
+        "थोडे",
+        "अस्खलित नाही"
+      ],
+      "response": "अनिश्चिवानी",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-08",
+      "category": "language",
+      "difficulty": "hard",
+      "prompt": "'यायाती' ही प्रसिद्ध मराठी कादंबरी कोणी लिहिली?",
+      "expected_keywords": [
+        "खांडेकर",
+        "वि. स. खांडेकर"
+      ],
+      "response": "जॉन ब्रूनी",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-09",
+      "category": "language",
+      "difficulty": "medium",
+      "prompt": "'पु. ल. देशपांडे' हे कोण होते?",
+      "expected_keywords": [
+        "लेखक",
+        "विनोदी",
+        "मराठी",
+        "साहित्यिक"
+      ],
+      "response": "जॉन डिस्ने",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "lang-10",
+      "category": "language",
+      "difficulty": "easy",
+      "prompt": "'I am going home' या इंग्रजी वाक्याचे मराठी भाषांतर सांगा.",
+      "expected_keywords": [
+        "मी",
+        "घरी",
+        "जात",
+        "जातो",
+        "जाते"
+      ],
+      "response": "अधिक जाणीव प्रदान करून, खालील उत्तरासा वापरा: हे गोष्ट असे आहे की तुम्ही बाहेर जाऊ शकता.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "reas-01",
+      "category": "reasoning",
+      "difficulty": "easy",
+      "prompt": "२५ + ७५ किती होतात?",
+      "expected_keywords": [
+        "१००",
+        "100",
+        "शंभर"
+      ],
+      "response": "१३०",
+      "scores": {
+        "fluency": 3,
+        "factuality": 1,
+        "cultural_accuracy": 3,
+        "instruction_following": 2
+      }
+    },
+    {
+      "id": "reas-02",
+      "category": "reasoning",
+      "difficulty": "medium",
+      "prompt": "रामची उंची सीतापेक्षा जास्त आहे, आणि सीताची उंची मीनापेक्षा जास्त आहे. तर सर्वात कमी उंचीची व्यक्ती कोण?",
+      "expected_keywords": [
+        "मीना"
+      ],
+      "response": "सीताची उंची 10 मीटर आहे, रामची उंची 8 मीटर आहे, मीनाची उंची 7 मीटर आहे. मीनाची उंची सीतापेक्षा कमी आहे. अंतिम उत्तर: मीना�.",
+      "scores": {
+        "fluency": 4,
+        "factuality": 2,
+        "cultural_accuracy": 3,
+        "instruction_following": 4
+      }
+    },
+    {
+      "id": "reas-03",
+      "category": "reasoning",
+      "difficulty": "medium",
+      "prompt": "जर एक रेल्वे संध्याकाळी ६ वाजता मुंबईहून निघाली आणि रात्री ९:३० वाजता पुण्यात पोहोचली, तर प्रवास किती वेळ चालला?",
+      "expected_keywords": [
+        "३ तास ३०",
+        "साडे तीन",
+        "३.५",
+        "3.5",
+        "210 मिनिटे"
+      ],
+      "response": "पुण्यामध्ये रेल्वेच्या शेवटच्या भागात फक्त 3 तास खाली आहे. रेल्वेच्या शेवटच्या भागात 6 वाजता रात्री 9:30 वाजता पुण्यात पोहचल्यानंतर त्याला 3 तास खाली आहे. तर त्याला 6 + 3 = 9 तास खाली आहेत. उत्तर: ९.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "reas-04",
+      "category": "reasoning",
+      "difficulty": "easy",
+      "prompt": "उन्हात बर्फ का वितळतो?",
+      "expected_keywords": [
+        "उष्णता",
+        "तापमान",
+        "सूर्य"
+      ],
+      "response": "संग्रहालयाच्या शेवटी खोलीच्या दारासाठी बर्फ वितळतो.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "reas-05",
+      "category": "reasoning",
+      "difficulty": "medium",
+      "prompt": "एका दुकानात एक पेन ३० रुपयांना मिळतो. १२ पेन घेतल्यास किती रुपये द्यावे लागतील?",
+      "expected_keywords": [
+        "३६०",
+        "360"
+      ],
+      "response": "12 * 30 = 360 रुपये",
+      "scores": {
+        "fluency": 3,
+        "factuality": 5,
+        "cultural_accuracy": 3,
+        "instruction_following": 4
+      }
+    },
+    {
+      "id": "reas-06",
+      "category": "reasoning",
+      "difficulty": "easy",
+      "prompt": "एका आठवड्यात किती दिवस असतात?",
+      "expected_keywords": [
+        "सात",
+        "७",
+        "7"
+      ],
+      "response": "आठवड्याची रात्र १२ ते ३ इतकी आहे. आज, रात्री 12 ते 3 ला आधीच दिवस आहे. तर, आजची रात्र 12 ते 3 ला आहे. तर, आजची रात्र 12 ते 3 ला आहे.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "reas-07",
+      "category": "reasoning",
+      "difficulty": "medium",
+      "prompt": "एक चांगला सॉफ्टवेअर इंजिनिअर होण्यासाठी कोणते तीन गुण आवश्यक आहेत?",
+      "expected_keywords": [
+        "समस्या",
+        "शिकण्याची",
+        "तर्क",
+        "संवाद",
+        "अभ्यास"
+      ],
+      "response": "स्वतःचा शोध घेणे, ब्रेकअप लागण्याचा प्रयत्न करणे आणि खूप धडपट झाल्यासारखे निष्फळ भाषा वापरणे.",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "reas-08",
+      "category": "reasoning",
+      "difficulty": "medium",
+      "prompt": "मुलांना दररोज व्यायाम करण्याचे तीन फायदे सांगा.",
+      "expected_keywords": [
+        "आरोग्य",
+        "एकाग्रता",
+        "ताकद",
+        "तंदुरुस्ती"
+      ],
+      "response": "अभिनय, ब्रेक रिसेप्शन, आणखी एक गोष्ट असू शकते. तथापि, त्याला खात्री नव्हती की त्याच्या भावना आणि इतर व्यक्तींच्या भावना यांच्यात त्याला अधिक व्यायाम करण्याची परवानगी होती. त्याला वाटले की त्याला व्यायाम करण्�",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "reas-09",
+      "category": "reasoning",
+      "difficulty": "hard",
+      "prompt": "जर आज रविवार असेल तर १० दिवसांनी कोणता वार येईल?",
+      "expected_keywords": [
+        "बुधवार"
+      ],
+      "response": "आज रविवार हंगामाच्या पहिल्या दोन दिवसांच्या बाकड्याने झाला असेल, तर त्याचे निर्णय 10 - 2 = 8 दिवसांनी घ्यावे लागतील. इतर दोन दिवसांच्या बाकड्याने झाल्यास, त्यांना शेवटी त्यांच्या बाकड्यात 8 + 2 = 10 दिवस आह",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    },
+    {
+      "id": "reas-10",
+      "category": "reasoning",
+      "difficulty": "medium",
+      "prompt": "स्वच्छ पाणी पिण्याचे महत्त्व दोन वाक्यांत सांगा.",
+      "expected_keywords": [
+        "आरोग्य",
+        "रोग",
+        "शुद्ध",
+        "जंतू"
+      ],
+      "response": "अर्थात, या वाक्याची अधिक क्लिष्ट आवृत्ती अशी आहे \"दोन वाक्यांमध्ये 'स्वच्छ पाणी पिण्याचे' हे गृहीतकाचे निर्णय आहे, जे ब्रिटिश डॉक्टर फ्रँक ओल्सन यांनी 1973 मध्ये लिहिले होते\".",
+      "scores": {
+        "fluency": 1,
+        "factuality": 1,
+        "cultural_accuracy": 1,
+        "instruction_following": 1
+      }
+    }
+  ],
+  "per_category_mean": {
+    "geography": {
+      "fluency": 1.4,
+      "factuality": 1.0,
+      "cultural_accuracy": 1.3,
+      "instruction_following": 1.2
+    },
+    "history": {
+      "fluency": 1.0,
+      "factuality": 1.0,
+      "cultural_accuracy": 1.0,
+      "instruction_following": 1.0
+    },
+    "culture": {
+      "fluency": 1.5,
+      "factuality": 1.2,
+      "cultural_accuracy": 1.1,
+      "instruction_following": 1.1
+    },
+    "language": {
+      "fluency": 1.4,
+      "factuality": 1.4,
+      "cultural_accuracy": 1.4,
+      "instruction_following": 1.4
+    },
+    "reasoning": {
+      "fluency": 1.7,
+      "factuality": 1.5,
+      "cultural_accuracy": 1.6,
+      "instruction_following": 1.7
+    }
+  },
+  "overall_mean": {
+    "fluency": 1.4,
+    "factuality": 1.22,
+    "cultural_accuracy": 1.28,
+    "instruction_following": 1.28
+  }
+}

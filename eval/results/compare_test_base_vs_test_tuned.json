@@ -1,0 +1,11 @@
+{
+  "wins_a": 19,
+  "wins_b": 71,
+  "ties": 10,
+  "total": 100,
+  "win_rate_a": 0.19,
+  "win_rate_b": 0.71,
+  "a_tag": "test_base",
+  "b_tag": "test_tuned",
+  "judge": "openai"
+}

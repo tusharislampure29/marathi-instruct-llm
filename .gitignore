@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# venv
+.venv/
+venv/
+env/
+
+# Data — large or licensed; not committed
+data/raw/
+data/processed/
+*.jsonl
+*.parquet
+*.arrow
+
+# Model artifacts — pushed to HuggingFace, not GitHub
+checkpoints/
+adapters/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# Eval outputs — keep final JSONs (proof of numbers), drop intermediates / zips
+eval/results/*.csv
+eval/results/*.partial.json
+eval/results/*.zip
+!eval/results/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+wandb/
+runs/
+
+# Local scratch dirs (anything prefixed with underscore)
+_*/
+
+# Kaggle CLI scratch
+kaggle-meta*.json
